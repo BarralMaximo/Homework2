@@ -8,7 +8,7 @@ void CuentaCorriente::retirar(double cantidad) {
     else {
         double faltante = cantidad - balance;
 
-        if (respaldo && respaldo->getBalance() >= faltante) {
+        if (respaldo && respaldo->balance >= faltante) {
             std::cout << "Fondos insuficientes en cuenta corriente. Retirando $" << faltante << " de caja de ahorro...\n";
             respaldo->retirar(faltante);
             balance = 0;

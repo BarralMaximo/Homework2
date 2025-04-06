@@ -3,8 +3,6 @@
 
 CajaDeAhorro::CajaDeAhorro(std::string titular, double bal): Cuenta(titular, bal), contadorVistas(0) {}
 
-double CajaDeAhorro::getBalance() const {return balance;}
-
 void CajaDeAhorro::retirar(double cantidad) {
     if (cantidad < 0) {
         std::cout << "Cantidad inválida.\n";

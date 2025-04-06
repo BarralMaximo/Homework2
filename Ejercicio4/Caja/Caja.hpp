@@ -5,7 +5,8 @@
 class CajaDeAhorro : public Cuenta {
 private:
     int contadorVistas;
-
+    friend class CuentaCorriente;
+    
 public:
     CajaDeAhorro(std::string titular, double bal = 0.0);
 

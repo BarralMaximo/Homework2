@@ -45,7 +45,7 @@ protected:
     double balance;
 ```
 
-El atributo balance se declaró como `protected` para que pueda ser accedidos directamente desde las subclases, como `Caja` y `CuentaCorriente`. Esta decisión mejora la eficiencia y legibilidad en las subclases sin comprometer la seguridad, ya que este atributo sigue sin estar accesible desde código externo. Evitar public protege contra modificaciones directas e incontroladas desde fuera de la jerarquía.
+El atributo balance se declaró como `protected` para que pueda ser accedido directamente desde las subclases, como `Caja` y `CuentaCorriente`. Esta decisión mejora la eficiencia y legibilidad en las subclases sin comprometer la seguridad, ya que este atributo sigue sin estar accesible desde código externo. Evitar public protege contra modificaciones directas e incontroladas desde fuera de la jerarquía.
 
 ```cpp
 private:
@@ -75,9 +75,10 @@ Atributo: `private`
 ```cpp
 private:
     int contadorVistas;
+    friend class CuentaCorriente;
 ```
 
-Este atributo es interno y específico de la lógica de CajaDeAhorro. No es necesario ni deseable que otras clases tengan acceso directo a él, ya que su único propósito es contar las llamadas a mostrarInfo. Declararlo como private asegura que su gestión queda encapsulada dentro de la clase y puede modificarse sin afectar a usuarios o subclases.
+Este atributo es interno y específico de la lógica de CajaDeAhorro. No es necesario ni deseable que otras clases tengan acceso directo a él, ya que su único propósito es contar las llamadas a mostrarInfo. Declararlo como private asegura que su gestión queda encapsulada dentro de la clase y puede modificarse sin afectar a usuarios o subclases. Se declara a `CuentaCorriente` como *friend* de `CajaDeAhorro` para permitir el acceso directo a su balance al realizar retiros que exceden los fondos. Si bien sería preferible usar un método como get_balance() por razones de **encapsulamiento** y **mantenibilidad**, se optó por friend para cumplir con los requerimientos de la consigna.
 
 Métodos: `public`
 
