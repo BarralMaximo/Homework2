@@ -9,6 +9,22 @@ Este repositorio contiene las soluciones para los ejercicios del **Homework 2** 
 ## Ejercicio 2
 
 ## Ejercicio 3
+ Se sobrecargaron los operadores básicos (`+`, `-`, `*`, `/`) para que se puedan usar de manera natural entre objetos, como si fueran tipos nativos. Asimismo, esta implementación permite hacer cuentas mezclando distintos tipos números. Si sumás, por ejemplo, un Entero con un Real, el sistema se encarga de convertirlos internamente para que todo funcione bien y no se pierda precisión. Este comportamiento sigue la jerarquía propia de estos conjuntos numericos (`Entero < Real < Complejo`).
+
+Existen dos formas de compilar este ejercicio (ambos deben ejecutarse desde la carpeta de Ejercicio3):
+- Una versión con una interfaz por terminal que permite probar la implementación.
+- Una versión de tests en la que se ejecutan pruebas prefabricadas que prueban el funcionamiento de las clases.
+
+**Compilar el ejercicio 3 con interfaz de usuario**
+```bash
+g++ -o Ejercicio3 Number/Number.cpp Integer/Integer.cpp Real/Real.cpp Complex/Complex.cpp Menu.cpp
+```
+> Nota: Para usar la interfaz es necesario crear primero un número de algún tipo (Opciones 1, 2 y 3) y luego al acceder a las operaciones se le pedirá el segundo número y su tipo.
+
+**Compilar los tests del ejercicio 3**
+```bash
+g++ -o Ejercicio3 Number/Number.cpp Integer/Integer.cpp Real/Real.cpp Complex/Complex.cpp Tests.cpp
+```
 
 ## Ejercicio 4
 
