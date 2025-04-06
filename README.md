@@ -1,5 +1,3 @@
-# Homework 2
-
 ## Introducción
 Este repositorio contiene las soluciones para los ejercicios del **Homework 2** de la materia **I102 - Paradigmas de Programación**. Cada ejercicio se encuentra en su respectiva carpeta, y las instrucciones de compilación están detalladas a continuación.
 

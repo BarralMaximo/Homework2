@@ -7,7 +7,6 @@
 
 using namespace std;
 
-// Función para limpiar entrada
 void clear_input() {
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
