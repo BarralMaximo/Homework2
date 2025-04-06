@@ -5,6 +5,11 @@ Este repositorio contiene las soluciones para los ejercicios del **Homework 2** 
 
 
 ## Ejercicio 1
+Para compilar el menu del ejercicio 1, usa el siguiente comando dentro de la carpeta Ejercicio1:
+```bash
+g++ -o Ejercicio1 Times/Times.cpp Tests.cpp
+```
+> Nota: El menu permite al usuario realizar todas las pruebas de funcionamiento que crea conveniente. Sin embargo, también cuenta con una opción de tests prefabricados, donde se evaluan algunas de las funcionalidades principales del ejercicio.
 
 ## Ejercicio 2
 
