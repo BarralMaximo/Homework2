@@ -12,9 +12,17 @@ g++ -o Ejercicio1 Times/Times.cpp Tests.cpp
 > Nota: El menu permite al usuario realizar todas las pruebas de funcionamiento que crea conveniente. Sin embargo, también cuenta con una opción de tests prefabricados, donde se evaluan algunas de las funcionalidades principales del ejercicio.
 
 ## Ejercicio 2
+Este ejercicio desarrolla un sistema de gestión de alumnos y clases, modelado mediante programación orientada a objetos. La relación entre los objetos `Course` y `Student` es de tipo **agregación**, ya que un curso puede existir sin alumnos, y un alumno puede no estar inscrito en ningún curso.
+
+Dado que algunos cursos comparten la mayor parte de los estudiantes, se implementó un constructor de copia para la clase `Course` que realiza una *shallow copy* (copia superficial). Esto significa que el nuevo curso copiado tiene su propio vector de punteros, pero los punteros apuntan a los mismos objetos Student en memoria que el curso original. De esta forma, se evita duplicar la información de los estudiantes y se garantiza que cualquier cambio en un estudiante se refleje en todos los cursos en los que esté inscripto.
+
+Para compilar el menu del ejercicio 2, usa el siguiente comando dentro de la carpeta Ejercicio2:
+```bash
+g++ -o Ejercicio2 Course/Course.cpp Student/Student.cpp Menu.cpp
+```
 
 ## Ejercicio 3
- Se sobrecargaron los operadores básicos (`+`, `-`, `*`, `/`) para que se puedan usar de manera natural entre objetos, como si fueran tipos nativos. Asimismo, esta implementación permite hacer cuentas mezclando distintos tipos números. Si sumás, por ejemplo, un Entero con un Real, el sistema se encarga de convertirlos internamente para que todo funcione bien y no se pierda precisión. Este comportamiento sigue la jerarquía propia de estos conjuntos numericos (`Entero < Real < Complejo`).
+Se sobrecargaron los operadores básicos (`+`, `-`, `*`, `/`) para que se puedan usar de manera natural entre objetos, como si fueran tipos nativos. Asimismo, esta implementación permite hacer cuentas mezclando distintos tipos números. Si sumás, por ejemplo, un Entero con un Real, el sistema se encarga de convertirlos internamente para que todo funcione bien y no se pierda precisión. Este comportamiento sigue la jerarquía propia de estos conjuntos numericos (`Entero < Real < Complejo`).
 
 Existen dos formas de compilar este ejercicio (ambos deben ejecutarse desde la carpeta de Ejercicio3):
 - Una versión con una interfaz por terminal que permite probar la implementación.
